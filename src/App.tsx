@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { StarryBackground } from './components/StarryBackground'
 
 interface Todo {
   id: number
@@ -99,7 +100,9 @@ function App() {
     })
 
   return (
-    <div className="todo-container">
+    <>
+      <StarryBackground />
+      <div className="todo-container">
       <h1>待辦事項清單</h1>
       <div className="input-container">
         <input
@@ -196,6 +199,7 @@ function App() {
         ))}
       </ul>
     </div>
+    </>
   )
 }
 
